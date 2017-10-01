@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;Animal.topSpeed&apos; in &apos;Animal&apos;&#x0A;- Original project: &apos;R3&apos;&#x0A;- Original element: &apos;Animal.topSpeed&apos;&#x0A;- Getter method name: &apos;getTopSpeed&apos;&#x0A;- Setter method name: &apos;setTopSpeed&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;topSpeed&apos;" flags="589830" getter="getTopSpeed" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;{Animal.java[Animal^topSpeed" insertion="1" setter="setTopSpeed" stamp="1391720253670" version="1.0" visibility="1"/>
+</session>

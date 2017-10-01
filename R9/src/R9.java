@@ -1,0 +1,67 @@
+
+public class R9 {
+
+	public int max(int[] array){
+
+		int[] first;
+		int[] last;
+		
+		if(array.length == 1)
+			return array[0];
+
+		if(array.length % 2 == 0){
+			
+			first = new int[array.length/2];
+			last = new int[array.length/2];
+
+			for(int i = 0; i < first.length; i++){
+				first[i] = array[i];
+			}
+
+			for(int j = 0; j < last.length; j++){
+				last[j] = array[(array.length/2) + j];
+			}
+		}
+		else{
+			first = new int[array.length/2];
+			last = new int[(array.length/2) + 1];
+
+			for(int i = 0; i < first.length; i++){
+				first[i] = array[i];
+			}
+
+			for(int j = 0; j < last.length; j++){
+				last[j] = array[array.length/2 + j];
+			}	
+		}
+
+		return Math.max(thing(first, 0), thing(last, 0));
+
+	}
+
+	public int thing(int[] array, int start){
+		if(start == array.length-1)
+			return array[start];
+
+		else{
+			return Math.max(array[start], thing(array, start+1));
+		}
+	}
+
+	public static void main(String[] args){
+
+		R9 recursion = new R9();
+
+		int[] list1 = {1,2,3,4,5,6,7,8,9};
+		int[] list2 = {1,2,3,4,5,6,7,8,9,10};
+		int[] list3 = {12345};
+
+		System.out.println(recursion.max(list1));
+		System.out.println(recursion.max(list2));
+		System.out.println(recursion.max(list3));
+
+
+
+	}
+
+}
